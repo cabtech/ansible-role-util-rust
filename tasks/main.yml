@@ -13,7 +13,7 @@
 
 - name: "Run install script"
   ansible.builtin.command:
-    cmd: "{{ rust_installer }}"
+    cmd: "{{ rust_installer }} -y"
   args:
     creates: ~{{ item }}/{{ rust_flag }}
   loop: "{{ rust_users }}"
