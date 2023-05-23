@@ -1,0 +1,25 @@
+---
+# --------------------------------
+
+- name: "Copy install script over"
+  ansible.builtin.copy:
+    dest: "{{ rust_installer }}"
+    group: root
+    owner: root
+    mode: "0755"
+    src: "install-rustup.sh"
+  become: true
+  tags: ["ct-rust"]
+
+- name: "Run install script"
+  ansible.builtin.command:
+    cmd: "{{ rust_installer }}"
+  args:
+    creates: ~{{ item }}/{{ rust_flag }}
+  loop: "{{ rust_users }}"
+  become: true
+  become_user: "{{ item }}"
+  tags: ["ct-rust"]
+
+# --------------------------------
+...

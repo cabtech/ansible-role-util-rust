@@ -1,0 +1,5 @@
+---
+rust_flag: ".cargo/env"
+rust_installer: /usr/local/bin/install-rustup.sh
+rust_users: []
+...
