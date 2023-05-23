@@ -1,0 +1,6 @@
+---
+skip_list:
+- ignore-errors
+- name[template]
+- yaml[indentation]
+...
