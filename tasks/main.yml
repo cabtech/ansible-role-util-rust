@@ -21,5 +21,12 @@
   become_user: "{{ item }}"
   tags: ["ct-rust"]
 
+- name: "Install dependencies"
+  ansible.builtin.apt:
+    name: "{{ rust_other_pkgs }}"
+    state: present
+  become: true
+  tags: ["ct-rust"]
+
 # --------------------------------
 ...
