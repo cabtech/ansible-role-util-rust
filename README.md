@@ -6,7 +6,7 @@ Installs Rust using RustUp
 | ---- | ---- | ----- | ------- |
 | rust_flag | UnixPath | `.cargo/env` | relative to homedir |
 | rust_installer | UnixPath | `/usr/local/bin/install-rustup.sh` |
-| rust_other_pkgs | list(string) | [] | extra pkgs to install; e.g. if using KDB |
+| rust_other_pkgs | list(string) | [] | extra pkgs to install |
 | rust_users | list(UnixUser) | [] ||
 
 ## Notes
