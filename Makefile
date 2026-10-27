@@ -12,11 +12,6 @@ lint: .ylint .alint
 clean:
 	@/bin/rm -f .alint .ylint
 
-.PHONY: push
-push: lint
-	@mkdir -p /mnt/hgfs/shared/ansible-role-util-rust
-	rsync -a * /mnt/hgfs/shared/ansible-role-util-rust
-
 # --------------------------------
 
 init-uv:
